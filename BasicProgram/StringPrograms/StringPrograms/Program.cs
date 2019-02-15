@@ -11,6 +11,8 @@ namespace SimpleCodes
 
         public void StringReverse(string str,string caseNo)
         {
+            int k;
+            int a = 0;
             int strLeng = str.Length;
             switch (caseNo)
             {
@@ -22,16 +24,21 @@ namespace SimpleCodes
                     } while (strLeng != 0);
                     break;
                 case "2":
-                    for (int i=0; i < strLeng-1; i++)
+                    for (int i=0; i <= strLeng-1; i++)
                     {
-                        if (str[i] == ' ')
+                        if (str[i] == ' ' || i == strLeng - 1)
                         {
-                            for (int j = i-1; j >= i-j; j--)
+                            if (i == strLeng - 1)
                             {
-                                Console.Write(str[j]);
+                                i = i + 1;
                             }
-                                
-                          
+                            k = i;
+                            for (int j = i - 1; j >= a; j--)
+                            {
+                                Console.Write(str[j]);  
+                            }
+                            Console.Write(" ");
+                            a = k + 1;
                         }
                     }
                     break;
