@@ -11,15 +11,29 @@ namespace SimpleCodes
 
         public void StringReverse(string str,string caseNo)
         {
+            int strLeng = str.Length;
             switch (caseNo)
             {
                 case "1":
-                    int strLeng = str.Length;
                     do
                     {
                         Console.Write(str[strLeng - 1]);
                         strLeng--;
                     } while (strLeng != 0);
+                    break;
+                case "2":
+                    for (int i=0; i < strLeng-1; i++)
+                    {
+                        if (str[i] == ' ')
+                        {
+                            for (int j = i-1; j >= i-j; j--)
+                            {
+                                Console.Write(str[j]);
+                            }
+                                
+                          
+                        }
+                    }
                     break;
                 default:
                     break;
@@ -45,6 +59,9 @@ namespace SimpleCodes
                     break;
                 case "1":
                     p1.StringReverse("Aniket","1");
+                    break;
+                case "2":
+                    p1.StringReverse("Aniket is good boy", "2");
                     break;
                 default:
                     break;
