@@ -55,10 +55,39 @@ namespace Patterns
             Console.ReadKey();
         }
 
+        // Print Floyd's traingle
+        // 1
+        // 2 3
+        // 4 5 6
+        // 7 8 9 10
+        public void Pattern3()
+        {
+            Console.WriteLine("Enter the line values");
+            int length1 = Convert.ToInt32(Console.ReadLine());
+            int k = 1;
+            for (int i = 1; i <= length1; i++)
+            {
+                for (int j = 1; j <= length1; j++)
+                {
+                    if (i>=j)
+                    {
+                        Console.Write(k +" ");
+                        k++;
+                    }
+                   
+                }
+                Console.WriteLine(" ");
+                
+            }
+
+            Console.WriteLine("Press key..");
+            Console.ReadKey();
+        }
+
         static void Main(string[] args)
         {
             Program p1 = new Program();
-            p1.Pattern2();
+            p1.Pattern3();
             
         }
     }
