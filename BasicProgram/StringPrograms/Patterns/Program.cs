@@ -84,10 +84,37 @@ namespace Patterns
             Console.ReadKey();
         }
 
+        // Inverted half pyramid using *
+        //*****
+        //****
+        //***
+        //**
+        //*
+        public void Pattern4()
+        {
+            Console.WriteLine("Enter the line values");
+            int length1 = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = length1; i >= 1; i--)
+            {
+                for (int j = 1; j <= length1; j++)
+                {
+                    if (j<i || j==i)
+                    {
+                        Console.Write("*");
+                    }                   
+                }
+                Console.WriteLine("");
+            }
+
+            Console.WriteLine("Press key..");
+            Console.ReadKey();
+        }
+
         static void Main(string[] args)
         {
             Program p1 = new Program();
-            p1.Pattern3();
+            p1.Pattern4();
             
         }
     }
